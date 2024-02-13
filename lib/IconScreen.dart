@@ -14,7 +14,8 @@ class _IconScreenState extends State<IconScreen> {
       child: Scaffold(
         appBar: AppBar(
           elevation: 10,
-          title: const Text("ICONS"),
+          title: const Text("ICONS",style: TextStyle(color: Colors.white)),
+          backgroundColor: Colors.blue,
           centerTitle: true,
         ),
         body: Column(

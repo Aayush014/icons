@@ -13,64 +13,66 @@ class _IconScreenState extends State<IconScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          elevation: 10,
           title: const Text("ICONS"),
           centerTitle: true,
         ),
-        body: Column(crossAxisAlignment: CrossAxisAlignment.start,mainAxisAlignment: MainAxisAlignment.center,
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SingleChildScrollView(scrollDirection:Axis.horizontal ,
-              child:
-              Row(
-                children: [
-                 customBox(Icon(Icons.add)),
-                 customBox(Icon(Icons.circle_notifications_rounded)),
-                 customBox(Icon(Icons.arrow_back_ios_new)),
-                 customBox(Icon(Icons.arrow_forward_ios)),
-                 customBox(Icon(Icons.alarm)),
-
-                ],
-              ),
-            ),
-            SingleChildScrollView(scrollDirection: Axis.horizontal,
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  customBox(Icon(Icons.verified_user_rounded)),
-                  customBox(Icon(Icons.account_circle)),
-                  customBox(Icon(Icons.flag_circle_outlined)),
-                  customBox(Icon(Icons.compare_arrows)),
+                  customBox(const Icon(Icons.add)),
+                  customBox(const Icon(Icons.circle_notifications_rounded)),
+                  customBox(const Icon(Icons.arrow_back_ios_new)),
+                  customBox(const Icon(Icons.arrow_forward_ios)),
+                  customBox(const Icon(Icons.alarm)),
                 ],
               ),
             ),
-            SingleChildScrollView(scrollDirection: Axis.horizontal,
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  customBox(Icon(Icons.backspace)),
-                  customBox(Icon(Icons.more_vert)),
-                  customBox(Icon(Icons.compare_arrows)),
+                  customBox(const Icon(Icons.verified_user_rounded)),
+                  customBox(const Icon(Icons.account_circle)),
+                  customBox(const Icon(Icons.flag_circle_outlined)),
+                  customBox(const Icon(Icons.compare_arrows)),
                 ],
               ),
             ),
-            SingleChildScrollView(scrollDirection: Axis.horizontal,
-              child:
-              Row(
-                children: [
-                  customBox(Icon(Icons.call)),
-                  customBox(Icon(Icons.search)),
-                  customBox(Icon(Icons.ac_unit)),
-                  customBox(Icon(Icons.square)),
-                  customBox(Icon(Icons.play_arrow)),
-
-                ],
-              ),
-            ),
-            SingleChildScrollView(scrollDirection: Axis.horizontal,
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  customBox(Icon(Icons.apps)),
-                  customBox(Icon(Icons.workspaces_outline)),
-                  customBox(Icon(Icons.wifi_lock_outlined)),
-
-
+                  customBox(const Icon(Icons.backspace)),
+                  customBox(const Icon(Icons.more_vert)),
+                  customBox(const Icon(Icons.compare_arrows)),
+                ],
+              ),
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  customBox(const Icon(Icons.call)),
+                  customBox(const Icon(Icons.search)),
+                  customBox(const Icon(Icons.ac_unit)),
+                  customBox(const Icon(Icons.square)),
+                  customBox(const Icon(Icons.play_arrow)),
+                ],
+              ),
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  customBox(const Icon(Icons.apps)),
+                  customBox(const Icon(Icons.workspaces_outline)),
+                  customBox(const Icon(Icons.wifi_lock_outlined)),
                 ],
               ),
             ),
@@ -83,14 +85,14 @@ class _IconScreenState extends State<IconScreen> {
 
 Widget customBox(Icon i1) {
   return Container(
-    margin: EdgeInsets.all(5),
+    margin: const EdgeInsets.all(5),
     width: 130,
     height: 130,
     decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
-          BoxShadow(color: Colors.grey, spreadRadius: 1, blurRadius: 5)
+          const BoxShadow(color: Colors.grey, spreadRadius: 1, blurRadius: 5)
         ]),
     child: i1,
   );
